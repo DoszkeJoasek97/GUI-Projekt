@@ -8,6 +8,8 @@ import sample.enums.ViewName;
 
 public class StartViewController {
 
+    //TODO GUI
+
     @FXML
     private Button gameBtn;
 

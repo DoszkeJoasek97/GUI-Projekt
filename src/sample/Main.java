@@ -25,12 +25,8 @@ public class Main extends Application {
 
     //statyczne, by dostawac dostep z kontrolerów widoków
     private static Map<ViewName, Scene> sceneMap = new TreeMap<>();
-
+    //tak samo stage
     private static Stage primaryStage;
-
-    public static Stage getStage(){
-        return primaryStage;
-    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -51,11 +47,16 @@ public class Main extends Application {
         return sceneMap;
     }
 
+    public static Stage getStage(){
+        return primaryStage;
+    }
+
     public static void initSceneMap() throws IOException {
         sceneMap.put(ViewName.START, new StartView().getScene());
         sceneMap.put(ViewName.GAME, new GameView().getScene());
         sceneMap.put(ViewName.LOSE, new LoseView().getScene());
         sceneMap.put(ViewName.WIN, new WinView().getScene());
+
     }
 
     public static void main(String[] args) {
